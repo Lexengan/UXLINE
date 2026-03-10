@@ -1,0 +1,377 @@
+# UXKnowDash — English translation (base language)
+# Copyright (C) 2024 Alexandre THEBAUD
+# License: GPL v2+
+#
+# INSTALLATION :
+#   1. Placer dans plugins/uxknowdash/locales/fr_FR.po
+#   2. Compiler : msgfmt fr_FR.po -o fr_FR.mo
+#   3. GLPI charge automatiquement fr_FR.mo si langue utilisateur = fr_FR
+#
+# RÈGLE : les msgid doivent correspondre EXACTEMENT aux chaînes utilisées
+# dans le code PHP via __('chaine', 'uxknowdash') et _n(), _x().
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: UXKnowDash 1.5.0\n"
+"Report-Msgid-Bugs-To: https://github.com/VOTRE_ORG/uxknowdash/issues\n"
+"POT-Creation-Date: 2026-03-10 00:00+0100\n"
+"PO-Revision-Date: 2026-03-10 00:00+0100\n"
+"Last-Translator: Alexandre THEBAUD\n"
+"Language-Team: English\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# ── Général ───────────────────────────────────────────────────
+msgid "UXKnowDash"
+msgstr "UXKnowDash"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "KB List"
+msgstr "KB List"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "All"
+msgstr "All"
+
+msgid "months"
+msgstr "months"
+
+msgid "year"
+msgstr "year"
+
+msgid "From"
+msgstr "From"
+
+msgid "To"
+msgstr "To"
+
+msgid "Apply"
+msgstr "Apply"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid "Save"
+msgstr "Save"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Creator"
+msgstr "Creator"
+
+msgid "Views"
+msgstr "Views"
+
+# ── Dashboard — Filtres ───────────────────────────────────────
+msgid "Entity"
+msgstr "Entity"
+
+msgid "Period"
+msgstr "Period"
+
+msgid "Category"
+msgstr "Category"
+
+msgid "Group"
+msgstr "Group"
+
+# ── Dashboard — KPI cards ─────────────────────────────────────
+msgid "Tickets resolved"
+msgstr "Tickets resolved"
+
+msgid "over the period"
+msgstr "over the period"
+
+msgid "Average FCR"
+msgstr "Average FCR"
+
+msgid "First Contact Resolution"
+msgstr "First Contact Resolution"
+
+msgid "KB Usage"
+msgstr "KB Usage"
+
+msgid "tickets linked to a KB"
+msgstr "tickets linked to a KB"
+
+msgid "Avg. KB Quality"
+msgstr "Avg. KB Quality"
+
+msgid "average rating /5"
+msgstr "average rating /5"
+
+# ── Dashboard — Sections accordéon ───────────────────────────
+msgid "FCR & KB Metrics"
+msgstr "FCR & KB Metrics"
+
+msgid "Detail by category"
+msgstr "Detail by category"
+
+msgid "KB Liaison Rate"
+msgstr "KB Liaison Rate"
+
+msgid "Tickets handled (excl. New) linked to at least one KB article"
+msgstr "Tickets handled (excl. New) linked to at least one KB article"
+
+# ── Dashboard — Graphiques ────────────────────────────────────
+msgid "FCR Rate by Category"
+msgstr "FCR Rate by Category"
+
+msgid "FCR"
+msgstr "FCR"
+
+msgid "yes"
+msgstr "yes"
+
+msgid "no"
+msgstr "no"
+
+msgid "KB used"
+msgstr "KB used"
+
+msgid "KB Usage Rate by Category"
+msgstr "KB Usage Rate by Category"
+
+msgid "KB Quality"
+msgstr "KB Quality"
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "FCR Rate by Group"
+msgstr "FCR Rate by Group"
+
+msgid "Daily trend"
+msgstr "Daily trend"
+
+msgid "volume & FCR"
+msgstr "volume & FCR"
+
+msgid "FCR (%)"
+msgstr "FCR (%)"
+
+msgid "KB Usage (%)"
+msgstr "KB Usage (%)"
+
+# ── Dashboard — Tableau ───────────────────────────────────────
+msgid "ITIL Category"
+msgstr "ITIL Category"
+
+msgid "col_volume"
+msgstr "col_volume"
+
+msgid "col_fcr"
+msgstr "col_fcr"
+
+msgid "col_kb_usage"
+msgstr "col_kb_usage"
+
+msgid "col_kb_quality"
+msgstr "col_kb_quality"
+
+msgid "col_technician"
+msgstr "col_technician"
+
+msgid "col_tickets"
+msgstr "col_tickets"
+
+msgid "col_with_kb"
+msgstr "col_with_kb"
+
+msgid "col_rate"
+msgstr "col_rate"
+
+msgid "col_gauge"
+msgstr "col_gauge"
+
+# ── Dashboard — Badges statut ─────────────────────────────────
+msgid "✓ OK"
+msgstr "✓ OK"
+
+msgid "⚠ Close"
+msgstr "⚠ Close"
+
+msgid "✗ Under target"
+msgstr "✗ Under target"
+
+# ── Dashboard — Liaison KB ────────────────────────────────────
+msgid "Tickets handled"
+msgstr "Tickets handled"
+
+msgid "excl. New status"
+msgstr "excl. New status"
+
+msgid "Tickets with KB"
+msgstr "Tickets with KB"
+
+msgid "at least 1 KB article linked"
+msgstr "at least 1 KB article linked"
+
+msgid "Global KB Liaison Rate"
+msgstr "Global KB Liaison Rate"
+
+msgid "% tickets linked to a KB"
+msgstr "% tickets linked to a KB"
+
+msgid "KB Liaison Rate by Technician"
+msgstr "KB Liaison Rate by Technician"
+
+msgid "Detail by technician"
+msgstr "Detail by technician"
+
+msgid "Technician"
+msgstr "Technician"
+
+msgid "Tickets"
+msgstr "Tickets"
+
+msgid "with KB"
+msgstr "with KB"
+
+msgid "Rate"
+msgstr "Rate"
+
+msgid "Gauge"
+msgstr "Gauge"
+
+msgid "KB Liaison Rate (%)"
+msgstr "KB Liaison Rate (%)"
+
+msgid "✓ Good"
+msgstr "✓ Good"
+
+msgid "⚠ Average"
+msgstr "⚠ Average"
+
+msgid "✗ Low"
+msgstr "✗ Low"
+
+# ── Dashboard — Export ────────────────────────────────────────
+msgid "Export CSV"
+msgstr "Export CSV"
+
+msgid "Export PDF"
+msgstr "Export PDF"
+
+msgid "UXKnowDash Export"
+msgstr "UXKnowDash Export"
+
+msgid "FCR linked"
+msgstr "FCR linked"
+
+msgid "FCR ✓"
+msgstr "FCR ✓"
+
+msgid "Non FCR"
+msgstr "Non FCR"
+
+msgid "KB linked"
+msgstr "KB linked"
+
+msgid "No KB"
+msgstr "No KB"
+
+# ── Dashboard — Messages système ─────────────────────────────
+msgid "Updated at"
+msgstr "Updated at"
+
+msgid "Error loading dashboard"
+msgstr "Error loading dashboard"
+
+msgid "No data available."
+msgstr "No data available."
+
+msgid "No data for selected filters."
+msgstr "No data for selected filters."
+
+msgid "No data to export."
+msgstr "No data to export."
+
+msgid "PDF error. See F12."
+msgstr "PDF error. See F12."
+
+# ── Liste KB ─────────────────────────────────────────────────
+msgid "KB Article"
+msgstr "KB Article"
+
+msgid "KB Category"
+msgstr "KB Category"
+
+msgid "ITIL Categories"
+msgstr "ITIL Categories"
+
+msgid "Rating"
+msgstr "Rating"
+
+msgid "Linked Tickets"
+msgstr "Linked Tickets"
+
+msgid "Linked Assets"
+msgstr "Linked Assets"
+
+msgid "Last revision"
+msgstr "Last revision"
+
+msgid "Last Consultation"
+msgstr "Last Consultation"
+
+msgid "Not rated"
+msgstr "Not rated"
+
+msgid "Never"
+msgstr "Never"
+
+msgid "Loading..."
+msgstr "Loading..."
+
+msgid "No article found."
+msgstr "No article found."
+
+msgid "Network error."
+msgstr "Network error."
+
+msgid "Error"
+msgstr "Error"
+
+msgid "articles"
+msgstr "articles"
+
+msgid "article"
+msgstr "article"
+
+msgid "Search article, author, category..."
+msgstr "Search article, author, category..."
+
+# ── Widget notation KB ────────────────────────────────────────
+msgid "Rate this article"
+msgstr "Rate this article"
+
+msgid "Your rating has been saved."
+msgstr "Your rating has been saved."
+
+msgid "Error saving rating."
+msgstr "Error saving rating."
+
+msgid "votes"
+msgstr "votes"
+
+msgid "vote"
+msgstr "vote"
+
+# ── Configuration ─────────────────────────────────────────────
+msgid "Enable KB prompt on resolve"
+msgstr "Enable KB prompt on resolve"
+
+msgid "Cron hour"
+msgstr "Cron hour"
+
+msgid "Configuration saved."
+msgstr "Configuration saved."
