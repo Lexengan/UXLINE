@@ -41,7 +41,7 @@
 
 ### Méthode 2 — Installation manuelle
 
-1. Télécharger la [dernière release](https://github.com/VOTRE_ORG/uxknowdash/releases)
+1. Télécharger la [dernière release](https://github.com/Lexengan/UXLINE/releases/)
 2. Extraire dans le dossier `plugins/` de GLPI :
    ```
    glpi/plugins/uxknowdash/
