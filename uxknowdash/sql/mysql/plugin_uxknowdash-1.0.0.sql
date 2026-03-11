@@ -56,9 +56,11 @@ CREATE TABLE IF NOT EXISTS `glpi_plugin_uxknowdash_focusprofiles` (
 -- ── Table category_targets ────────────────────────────────────
 CREATE TABLE IF NOT EXISTS `glpi_plugin_uxknowdash_category_targets` (
   `id`                int NOT NULL AUTO_INCREMENT,
+  `entities_id`       int NOT NULL DEFAULT 0,
   `itilcategories_id` int NOT NULL DEFAULT 0,
   `target_fcr`        float NOT NULL DEFAULT 0,
-  `target_kb`         float NOT NULL DEFAULT 0,
+  `target_kb_usage`   float NOT NULL DEFAULT 0,
+  `target_kb_quality` float NOT NULL DEFAULT 0,
   `date_creation`     datetime DEFAULT NULL,
   `date_mod`          datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
