@@ -54,9 +54,9 @@ UXKnowDash propose un tableau de bord complet pour les administrateurs et superv
             </fr>
         </long>
     </description>
-    <homepage>https://github.com/Lexengan/UXLINE/tree/my-pages/uxknowdash</homepage>
-    <download>https://github.com/Lexengan/UXLINE/releases</download>
-    <issues>https://github.com/Lexengan/UXLINE/issues</issues>
+    <homepage>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/README.md</homepage>
+    <download>https://github.com/Lexengan/UXLINE/releases/download/v1.5.0/uxknowdash-1.5.0.zip</download>
+    <issues></issues>
     <readme>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/README.md</readme>
     <authors>
         <author>Alexandre THEBAUD</author>
