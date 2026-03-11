@@ -1,57 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <root>
-    <name>UXKnowDash</name>
+    <name>ITSM Knowledge Analytics</name>
     <key>uxknowdash</key>
     <state>stable</state>
     <logo>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/uxknowdash.png</logo>
     <description>
         <short>
-            <en>Dashboard for tracking FCR, KB usage and knowledge base quality metrics in GLPI.</en>
+            <en>Dashboard for FCR, KB usage and knowledge base quality metrics in GLPI.</en>
             <fr>Tableau de bord FCR, usage KB et qualite de la base de connaissances pour GLPI.</fr>
         </short>
         <long>
-            <en>
-## UXKnowDash
-
-UXKnowDash provides a comprehensive dashboard for GLPI administrators and supervisors to track:
-
-- **First Contact Resolution (FCR)** rate by category and technician group
-- **Knowledge Base (KB) usage** rate - percentage of resolved tickets linked to a KB article
-- **KB quality ratings** - technician star ratings per article
-- **KB consultation tracking** - last viewed date per article with recency badges
-- **KB liaison rate** - global and per-technician KB linking stats
-- **ITIL category targets** - configurable FCR, KB usage and quality thresholds per category
-
-### Features
-
-- Interactive charts powered by Chart.js
-- Collapsible dashboard sections
-- CSV and PDF export
-- KB article list with consultation tracking
-- Category targets with bulk import/export CSV
-- Compatible with GLPI 11.0+
-            </en>
-            <fr>
-## UXKnowDash
-
-UXKnowDash propose un tableau de bord complet pour les administrateurs et superviseurs GLPI :
-
-- Taux de **resolution au premier contact (FCR)** par categorie et groupe technicien
-- Taux d utilisation de la **base de connaissances (KB)**
-- **Notation qualite KB** - etoiles par article par technicien
-- **Suivi des consultations KB** - date de derniere consultation avec badge de fraicheur
-- **Taux de liaison KB** - statistiques globales et par technicien
-- **Objectifs par categorie ITIL** - seuils FCR, KB et qualite configurables
-
-### Fonctionnalites
-
-- Graphiques interactifs via Chart.js
-- Sections de tableau de bord reductibles
-- Export CSV et PDF
-- Liste des articles KB avec suivi des consultations
-- Objectifs en masse via import/export CSV
-- Compatible GLPI 11.0+
-            </fr>
+            <en>UXKnowDash provides a dashboard for GLPI administrators to track FCR rate, KB usage rate, KB quality ratings, KB consultation tracking, KB liaison rate, and ITIL category targets. Features: interactive charts via Chart.js, collapsible sections, CSV and PDF export, compatible with GLPI 11.0+</en>
+            <fr>UXKnowDash propose un tableau de bord pour les administrateurs GLPI : taux FCR, taux utilisation KB, notation qualite KB, suivi consultations KB, taux liaison KB, objectifs par categorie ITIL. Fonctionnalites : graphiques interactifs Chart.js, sections reductibles, export CSV et PDF, compatible GLPI 11.0+</fr>
         </long>
     </description>
     <homepage>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/README.md</homepage>
@@ -93,7 +53,6 @@ UXKnowDash propose un tableau de bord complet pour les administrateurs et superv
     </tags>
     <screenshots>
         <screenshot>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/screenshots/Objectifs%20KM.jpg</screenshot>
-        <screenshot>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/screenshots/r%C3%A9pertoire%20admin%20KB.jpg</screenshot>
         <screenshot>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/screenshots/suivi%20utilisation%20KB.jpg</screenshot>
         <screenshot>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/screenshots/tableau%20de%20bord.jpg</screenshot>
         <screenshot>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/screenshots/tableau%20export.jpg</screenshot>
