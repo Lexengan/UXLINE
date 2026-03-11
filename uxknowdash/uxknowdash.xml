@@ -1,29 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!--
-    Fichier de déclaration pour le catalogue plugins.glpi-project.org
-    Source : https://glpi-developer-documentation.readthedocs.io/en/master/plugins/tutorial.html
-    Soumettre à : https://plugins.glpi-project.org/#/plugin/add
-    Pour le Marketplace : envoyer un email à glpi@teclib.com après acceptation sur le catalogue
--->
 <root>
-    <!-- Nom affiché dans le catalogue -->
-    <n>UXKnowDash</n>
-
-    <!-- Clé technique : doit correspondre EXACTEMENT au nom du dossier plugin -->
-    <!-- Règle : minuscules, alphanumériques uniquement, pas de tirets ni underscores -->
+    <name>UXKnowDash</name>
     <key>uxknowdash</key>
-
-    <!-- État : stable | beta | alpha -->
     <state>stable</state>
-
-    <!-- Logo : image 40x40px hébergée publiquement (ex: raw GitHub) -->
-    <!-- Remplacer l'URL par l'URL réelle après publication du repo GitHub -->
-    <logo>https://raw.githubusercontent.com/VOTRE_ORG/uxknowdash/main/uxknowdash.png</logo>
-
+    <logo>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/uxknowdash.png</logo>
     <description>
         <short>
             <en>Dashboard for tracking FCR, KB usage and knowledge base quality metrics in GLPI.</en>
-            <fr>Tableau de bord FCR, usage KB et qualité de la base de connaissances pour GLPI.</fr>
+            <fr>Tableau de bord FCR, usage KB et qualite de la base de connaissances pour GLPI.</fr>
         </short>
         <long>
             <en>
@@ -36,6 +20,7 @@ UXKnowDash provides a comprehensive dashboard for GLPI administrators and superv
 - **KB quality ratings** — technician star ratings per article
 - **KB consultation tracking** — last viewed date per article with recency badges
 - **KB liaison rate** — global and per-technician KB linking stats
+- **ITIL category targets** — configurable FCR, KB usage and quality thresholds per category
 
 ### Features
 
@@ -43,6 +28,7 @@ UXKnowDash provides a comprehensive dashboard for GLPI administrators and superv
 - Collapsible dashboard sections
 - CSV and PDF export
 - KB article list with consultation tracking
+- Category targets with bulk import/export CSV
 - Compatible with GLPI 11.0+
             </en>
             <fr>
@@ -50,51 +36,43 @@ UXKnowDash provides a comprehensive dashboard for GLPI administrators and superv
 
 UXKnowDash propose un tableau de bord complet pour les administrateurs et superviseurs GLPI :
 
-- Taux de **résolution au premier contact (FCR)** par catégorie et groupe technicien
-- Taux d'**utilisation de la base de connaissances (KB)** — tickets résolus liés à un article KB
-- **Notation qualité KB** — étoiles par article par technicien
-- **Suivi des consultations KB** — date de dernière consultation avec badge de fraîcheur
+- Taux de **resolution au premier contact (FCR)** par categorie et groupe technicien
+- Taux d utilisation de la **base de connaissances (KB)**
+- **Notation qualite KB** — etoiles par article par technicien
+- **Suivi des consultations KB** — date de derniere consultation avec badge de fraicheur
 - **Taux de liaison KB** — statistiques globales et par technicien
+- **Objectifs par categorie ITIL** — seuils FCR, KB et qualite configurables
 
-### Fonctionnalités
+### Fonctionnalites
 
-- Graphiques interactifs (barres, courbes, camembert) via Chart.js
-- Sections de tableau de bord réductibles
+- Graphiques interactifs via Chart.js
+- Sections de tableau de bord reductibles
 - Export CSV et PDF
 - Liste des articles KB avec suivi des consultations
+- Objectifs en masse via import/export CSV
 - Compatible GLPI 11.0+
             </fr>
         </long>
     </description>
-
-    <!-- URLs publiques — à mettre à jour après création du repo GitHub -->
-    <homepage>https://github.com/VOTRE_ORG/uxknowdash</homepage>
-    <download>https://github.com/VOTRE_ORG/uxknowdash/releases</download>
-    <issues>https://github.com/VOTRE_ORG/uxknowdash/issues</issues>
-    <readme>https://github.com/VOTRE_ORG/uxknowdash/blob/main/README.md</readme>
-
+    <homepage>https://github.com/Lexengan/UXLINE/tree/my-pages/uxknowdash</homepage>
+    <download>https://github.com/Lexengan/UXLINE/releases</download>
+    <issues>https://github.com/Lexengan/UXLINE/issues</issues>
+    <readme>https://github.com/Lexengan/UXLINE/blob/my-pages/uxknowdash/README.md</readme>
     <authors>
         <author>Alexandre THEBAUD</author>
     </authors>
-
     <versions>
         <version>
             <num>1.5.0</num>
-            <!-- Compatibilité : version majeure.mineure de GLPI -->
-            <compatibility>11.0</compatibility>
-            <!-- URL directe vers l'archive .tar.gz ou .zip du release GitHub -->
-            <!-- Format attendu : uxknowdash/ dossier à la racine de l'archive -->
-            <download_url>https://github.com/VOTRE_ORG/uxknowdash/releases/download/1.5.0/uxknowdash-1.5.0.tar.gz</download_url>
+            <compatibility>~11.0.0</compatibility>
+            <download_url>https://github.com/Lexengan/UXLINE/releases/download/v1.5.0/uxknowdash-1.5.0.tar.gz.7z</download_url>
         </version>
     </versions>
-
     <langs>
         <lang>en_GB</lang>
         <lang>fr_FR</lang>
     </langs>
-
     <license>GPL v2+</license>
-
     <tags>
         <en>
             <tag>dashboard</tag>
@@ -108,9 +86,12 @@ UXKnowDash propose un tableau de bord complet pour les administrateurs et superv
             <tag>tableau de bord</tag>
             <tag>base de connaissances</tag>
             <tag>FCR</tag>
-            <tag>métriques</tag>
+            <tag>metriques</tag>
             <tag>reporting</tag>
             <tag>helpdesk</tag>
         </fr>
     </tags>
+    <screenshots>
+        <screenshot>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/screenshots/dashboard.png</screenshot>
+    </screenshots>
 </root>
