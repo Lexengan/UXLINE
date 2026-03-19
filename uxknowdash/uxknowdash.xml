@@ -1,5 +1,5 @@
 <root>
-    <n>Knowledge Dashboard</n>
+    <name>Knowledge Dashboard</name>
     <key>uxknowdash</key>
     <state>stable</state>
     <logo>https://raw.githubusercontent.com/Lexengan/UXLINE/my-pages/uxknowdash/uxknowdash.png</logo>
