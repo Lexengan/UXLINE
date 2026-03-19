@@ -1,5 +1,5 @@
 -- ============================================================
--- UXKnowDash — Schéma complet v1.5.0
+-- UXKnowDash — Schéma complet v1.6.0
 -- Installation fraîche : crée toutes les tables et la vue
 -- Idempotent : IF NOT EXISTS sur toutes les tables
 -- ============================================================
@@ -18,36 +18,41 @@ CREATE TABLE IF NOT EXISTS `glpi_plugin_uxknowdash_settings` (
 -- Valeurs par défaut
 INSERT IGNORE INTO `glpi_plugin_uxknowdash_settings`
   (`entities_id`, `name`, `value`, `date_creation`) VALUES
-  (0, 'cron_hour',                '02:00', NOW()),
-  (0, 'enable_kb_prompt_on_resolve', '0',  NOW()),
-  (0, 'extra_field',              '',      NOW());
+  (0, 'cron_hour',                   '02:00', NOW()),
+  (0, 'enable_kb_prompt_on_resolve', '0',     NOW()),
+  (0, 'extra_field',                 '',      NOW());
 
 -- ── Table matrixcache ─────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS `glpi_plugin_uxknowdash_matrixcache` (
-  `id`            int      NOT NULL AUTO_INCREMENT,
-  `entities_id`   int      NOT NULL DEFAULT 0,
+  `id`            int          NOT NULL AUTO_INCREMENT,
+  `entities_id`   int          NOT NULL DEFAULT 0,
   `cache_key`     varchar(255) NOT NULL DEFAULT '',
   `cache_value`   longtext,
-  `date_creation` datetime DEFAULT NULL,
-  `date_mod`      datetime DEFAULT NULL,
+  `date_creation` datetime     DEFAULT NULL,
+  `date_mod`      datetime     DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uniq_key_entity` (`cache_key`, `entities_id`)
 ) ENGINE=InnoDB COMMENT='Cache matrice UXKnowDash';
 
 -- ── Table groupcategories ─────────────────────────────────────
+-- Correction v1.6.0 : ajout colonnes `entities_id` et `level`
+-- manquantes dans le schéma original (causaient Unknown column)
 CREATE TABLE IF NOT EXISTS `glpi_plugin_uxknowdash_groupcategories` (
-  `id`                  int NOT NULL AUTO_INCREMENT,
-  `groups_id`           int NOT NULL DEFAULT 0,
-  `itilcategories_id`   int NOT NULL DEFAULT 0,
-  `date_creation`       datetime DEFAULT NULL,
+  `id`                int         NOT NULL AUTO_INCREMENT,
+  `entities_id`       int         NOT NULL DEFAULT 0 COMMENT 'FK -> glpi_entities.id',
+  `groups_id`         int         NOT NULL DEFAULT 0,
+  `itilcategories_id` int         NOT NULL DEFAULT 0,
+  `level`             varchar(20) NOT NULL DEFAULT 'N1' COMMENT 'Niveau de support : N1, N2, N3, Expert',
+  `date_creation`     datetime    DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `uniq_group_cat` (`groups_id`, `itilcategories_id`)
+  UNIQUE KEY `uniq_group_cat` (`groups_id`, `itilcategories_id`),
+  KEY `idx_entity_level` (`entities_id`, `level`)
 ) ENGINE=InnoDB COMMENT='Association groupes/catégories UXKnowDash';
 
 -- ── Table focusprofiles ───────────────────────────────────────
 CREATE TABLE IF NOT EXISTS `glpi_plugin_uxknowdash_focusprofiles` (
-  `id`          int NOT NULL AUTO_INCREMENT,
-  `profiles_id` int NOT NULL DEFAULT 0,
+  `id`            int      NOT NULL AUTO_INCREMENT,
+  `profiles_id`   int      NOT NULL DEFAULT 0,
   `date_creation` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uniq_profile` (`profiles_id`)
@@ -55,9 +60,9 @@ CREATE TABLE IF NOT EXISTS `glpi_plugin_uxknowdash_focusprofiles` (
 
 -- ── Table category_targets ────────────────────────────────────
 CREATE TABLE IF NOT EXISTS `glpi_plugin_uxknowdash_category_targets` (
-  `id`                int NOT NULL AUTO_INCREMENT,
-  `entities_id`       int NOT NULL DEFAULT 0,
-  `itilcategories_id` int NOT NULL DEFAULT 0,
+  `id`                int   NOT NULL AUTO_INCREMENT,
+  `entities_id`       int   NOT NULL DEFAULT 0,
+  `itilcategories_id` int   NOT NULL DEFAULT 0,
   `target_fcr`        float NOT NULL DEFAULT 0,
   `target_kb_usage`   float NOT NULL DEFAULT 0,
   `target_kb_quality` float NOT NULL DEFAULT 0,
@@ -69,9 +74,9 @@ CREATE TABLE IF NOT EXISTS `glpi_plugin_uxknowdash_category_targets` (
 
 -- ── Table kbwatch ─────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS `glpi_plugin_uxknowdash_kbwatch` (
-  `id`               int NOT NULL AUTO_INCREMENT,
-  `knowbaseitems_id` int NOT NULL DEFAULT 0,
-  `users_id`         int NOT NULL DEFAULT 0,
+  `id`               int      NOT NULL AUTO_INCREMENT,
+  `knowbaseitems_id` int      NOT NULL DEFAULT 0,
+  `users_id`         int      NOT NULL DEFAULT 0,
   `date_creation`    datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uniq_watch` (`knowbaseitems_id`, `users_id`)
