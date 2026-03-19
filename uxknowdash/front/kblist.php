@@ -6,7 +6,7 @@
 include('../../../inc/includes.php');
 Session::checkRight('plugin_uxknowdash_view', READ);
 global $CFG_GLPI;
-Html::header(__('UXKnowDash', 'uxknowdash') . ' — ' . __('KB List', 'uxknowdash'), $_SERVER['PHP_SELF'], 'tools', 'PluginUxknowdashMenuKblist');
+Html::header(__('UXKnowDash', 'uxknowdash') . ' — ' . __('KB List', 'uxknowdash'), Plugin::getWebDir('uxknowdash') . '/front/kblist.php', 'tools', 'PluginUxknowdashMenuKblist');
 
 // Chaînes JS i18n
 $i18n = [

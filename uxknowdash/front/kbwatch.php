@@ -4,7 +4,7 @@ declare(strict_types=1);
 include('../../../inc/includes.php');
 Session::checkLoginUser();
 
-Html::header('UXKnowDash', $_SERVER['PHP_SELF'], 'tools', 'uxknowdash');
+Html::header('UXKnowDash', Plugin::getWebDir('uxknowdash') . '/front/kbwatch.php', 'tools', 'uxknowdash');
 
 $tpl = new \Glpi\Application\View\TemplateRenderer();
 

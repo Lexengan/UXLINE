@@ -3,7 +3,7 @@ include('../../../inc/includes.php');
 
 Session::checkRight('config', UPDATE);
 
-Html::header('UXKnowDash – Catégories N1/N2/N3', $_SERVER['PHP_SELF'], 'tools', 'PluginUxknowdashMenu');
+Html::header('UXKnowDash – Catégories N1/N2/N3', Plugin::getWebDir('uxknowdash') . '/front/groupcategories.form.php', 'tools', 'PluginUxknowdashMenu');
 
 $entity = Session::getActiveEntity();
 
@@ -25,7 +25,7 @@ if (isset($_POST['save'])) {
         }
     }
     Session::addMessageAfterRedirect('Catégories enregistrées.', true, INFO);
-    Html::redirect($_SERVER['PHP_SELF']);
+    Html::redirect(Plugin::getWebDir('uxknowdash') . '/front/groupcategories.form.php');
 }
 
 // Charger les groupes GLPI disponibles

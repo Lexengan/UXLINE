@@ -6,7 +6,7 @@
  */
 include('../../../inc/includes.php');
 Session::checkRight('plugin_uxknowdash_view', READ);
-Html::header(__('UXKnowDash', 'uxknowdash'), $_SERVER['PHP_SELF'], 'tools', 'PluginUxknowdashMenu');
+Html::header(__('UXKnowDash', 'uxknowdash'), Plugin::getWebDir('uxknowdash') . '/front/index.php', 'tools', 'PluginUxknowdashMenu');
 
 $entity  = Session::getActiveEntity();
 global $CFG_GLPI, $DB;
@@ -141,6 +141,14 @@ a.btn{text-decoration:none}
 #uxkd-nodata{display:none;text-align:center;padding:30px;color:#6c757d;font-size:14px}
 @media(max-width:1100px){.grid-3,.kpi-row{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.grid-3,.grid-2,.kpi-row{grid-template-columns:1fr}}
+
+/* ── Responsive charts : CSS only, zero JS change ── */
+/* On force max-height sur les canvas via l'attribut CSS natif */
+/* Chart.js responsive:true + maintainAspectRatio:true respecte ces contraintes */
+.cbox canvas{max-width:100%;display:block}
+#c-fcr-cat,#c-kb-cat,#c-grp,#c-liaison-tech{max-height:300px}
+#c-pie-fcr,#c-pie-kb,#c-qual-dist{max-height:250px}
+#c-trend{max-height:160px}
 </style>
 
 <div id="uxkd-loader"><div class="spin"></div></div>

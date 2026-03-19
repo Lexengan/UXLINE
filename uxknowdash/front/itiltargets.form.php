@@ -13,7 +13,7 @@ $entity = Session::getActiveEntity();
 
 // ── P3 : Import CSV ───────────────────────────────────────────────────────────
 if (isset($_POST['import_csv']) && !empty($_FILES['csv_file']['tmp_name'])) {
-    Session::checkSessionToken($_POST['_glpi_csrf_token'] ?? '');
+    
     $handle = fopen($_FILES['csv_file']['tmp_name'], 'r');
     fgetcsv($handle, 0, ';'); // skip header
     $count = 0;
@@ -31,7 +31,7 @@ if (isset($_POST['import_csv']) && !empty($_FILES['csv_file']['tmp_name'])) {
     }
     fclose($handle);
     Session::addMessageAfterRedirect("$count objectif(s) importé(s) depuis le CSV.", true, INFO);
-    Html::redirect($_SERVER['PHP_SELF']);
+    Html::redirect(Plugin::getWebDir('uxknowdash') . '/front/itiltargets.form.php');
 }
 
 // ── P3 : Export CSV ───────────────────────────────────────────────────────────
@@ -68,7 +68,7 @@ if (isset($_GET['export_csv'])) {
 
 // ── Enregistrement du formulaire ──────────────────────────────────────────────
 if (isset($_POST['save'])) {
-    Session::checkSessionToken($_POST['_glpi_csrf_token'] ?? '');
+    
 
     // P1 : Appliquer les objectifs globaux à toutes les catégories non configurées
     if (!empty($_POST['apply_global'])) {
@@ -105,7 +105,7 @@ if (isset($_POST['save'])) {
         );
     }
     Session::addMessageAfterRedirect('Objectifs enregistrés.', true, INFO);
-    Html::redirect($_SERVER['PHP_SELF']);
+    Html::redirect(Plugin::getWebDir('uxknowdash') . '/front/itiltargets.form.php');
 }
 
 // ── Chargement des données ────────────────────────────────────────────────────
@@ -123,7 +123,7 @@ foreach (PluginUxknowdashCategoryTarget::getTargets($entity) as $t) {
 $totalCats      = count($categories);
 $configuredCats = count($targets);
 
-Html::header('UXKnowDash – Objectifs ITIL', $_SERVER['PHP_SELF'], 'tools', 'PluginUxknowdashMenu');
+Html::header('UXKnowDash – Objectifs ITIL', Plugin::getWebDir('uxknowdash') . '/front/itiltargets.form.php', 'tools', 'PluginUxknowdashMenu');
 ?>
 <style>
 .uxkd-targets { padding: 16px 20px; }
