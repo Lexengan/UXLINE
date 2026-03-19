@@ -4,7 +4,7 @@
  * i18n : chaînes PHP via __(), chaînes JS via window.UXKD_KB_I18N
  */
 include('../../../inc/includes.php');
-Session::checkLoginUser();
+Session::checkRight('plugin_uxknowdash_view', READ);
 global $CFG_GLPI;
 Html::header(__('UXKnowDash', 'uxknowdash') . ' — ' . __('KB List', 'uxknowdash'), $_SERVER['PHP_SELF'], 'tools', 'PluginUxknowdashMenuKblist');
 
